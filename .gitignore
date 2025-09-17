@@ -1,0 +1,14 @@
+# Node
+node_modules
+frontend/node_modules
+frontend/.next
+
+# Composer / Laravel
+vendor
+backend/vendor
+backend/.env
+/backend/storage/*.key
+/storage/*.key
+
+# OS
+.DS_Store

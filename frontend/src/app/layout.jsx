@@ -1,3 +1,8 @@
+import Header from './components/header';
+import Overlay from './components/overlay';
+import Sidebar from './components/sidebar';
+import { UserProvider } from './context/auth-context';
+import { UtilsProvider } from './context/utils-context';
 import './globals.css';
 import localFont from 'next/font/local';
 
@@ -22,12 +27,30 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body
-				className={`${PoppinsReg.variable}  ${PoppinsBold.variable}  ${QuicksandReg.variable} antialiased `}
-			>
-				{children}{' '}
-			</body>{' '}
-		</html>
+		// <html lang="en">
+		// 	<body
+				
+		// 	>
+		// 		<UserProvider>
+		// 			{children}
+		// 			</UserProvider>
+		// 	</body>
+		// </html>
+
+<html lang="en">
+		<body  className={`${PoppinsReg.variable}  ${PoppinsBold.variable}  ${QuicksandReg.variable} antialiased  h-screen overflow-hidden  flex items-start  bg-white`} id="body">
+				<UserProvider>
+					<UtilsProvider>
+			<Sidebar hidden />
+			<Overlay />
+			<section className="h-full overflow-auto  w-full  flex flex-col gap-4 bg-light">
+				<Header />
+
+				{children}
+						</section>
+						</UtilsProvider>
+					</UserProvider>
+		</body>
+				</html>
 	);
 }

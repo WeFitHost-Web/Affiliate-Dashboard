@@ -6,10 +6,11 @@
     --color-success: #06d6a0;
     --color-warning: #ffd166;
     --color-danger: #ef476f;
-    --color-light: #f8f9fa;
+    --color-light: #F6F7FB;
     --color-dark: #212529;
     --color-gray: #6c757d;
     --color-light-gray: #e9ecef;
+    
     --breakpoint-4xl: 100rem;
     /* 1600px */
     --breakpoint-3xl: 95.9375rem;
@@ -48,4 +49,75 @@
 
 .poppins-bold {
     font-family: var(--font-poppinsextra)
+}
+
+button {
+    cursor: pointer !important;
+}
+
+.link-style-blue {
+    position: relative;
+}
+
+.link-style-blue:hover::after {
+    width: 100%;
+}
+
+.link-style-blue::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    width: 0;
+    background-color: #4361ee;
+    z-index: 10;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.invert {
+    filter: brightness(0) invert(1) !important;
+}
+.link-style {
+    position: relative;
+}
+
+.link-style:hover::after {
+    width: 100%;
+}
+
+.link-style::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.link-style-dark {
+    position: relative;
+}
+
+.link-style-dark:hover::after {
+    width: 100%;
+}
+
+.link-style-dark::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 0;
+    background-color: #000000;
+    z-index: 10;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+
+.custom-shadow{
+   box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1)
 }

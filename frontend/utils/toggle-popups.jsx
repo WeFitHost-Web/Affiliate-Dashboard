@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const usePopup = ({ duration = 280 }) => {
+export const usePopup = ({ duration = 280 }={}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const ref = useRef(null);

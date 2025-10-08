@@ -16,7 +16,7 @@ const Header = () => {
 	const linkname = usePathname();
 	
     return (
-			<header className={`flex items-center justify-end max-lg:justify-between  w-full  px-5   sticky top-0 z-50  bg-white ${linkname.startsWith('/auth') && 'hidden'}`}>
+			<header className={`flex items-center justify-end max-lg:justify-between  w-full  px-5   sticky top-0 z-50  bg-white  ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}`}>
 				<div className="max-lg:flex items-center gap-1 hidden">
 			
 

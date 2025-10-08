@@ -53,7 +53,9 @@ const Sidebar = ({ hidden }) => {
 	];
 	return (
 		<section
-			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5 max-xl:px-2 bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}`}
+			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5 max-xl:px-2 bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}  ${
+				hidden && 'max-lg:hidden'
+			}`}
 		>
 			<div className="flex    w-full flex-col max-lg:hidden border-b border-b-[#ffffff26] pl-4 pb-4">
 				<Link href={'/'}>

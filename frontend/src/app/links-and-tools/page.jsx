@@ -41,9 +41,9 @@ Create and manage your referral links					</span>
 					<h2 className="poppins-bold text-2xl">
 Your Referral Links
 					</h2>
-					<button className="h-[40px] bg-primary hover:bg-primary-dark text-base font-semibold text-white flex items-center gap-2 px-2 rounded-md duration-150">
+					{/* <button className="h-[40px] bg-primary hover:bg-primary-dark text-base font-semibold text-white flex items-center gap-2 px-2 rounded-md duration-150">
 <FaPlus/> <span>Create New Link</span>
-					</button>
+					</button> */}
 				</div>
 				<div className="w-full overflow-auto">
 					<div className='w-full min-w-[1000px]'>

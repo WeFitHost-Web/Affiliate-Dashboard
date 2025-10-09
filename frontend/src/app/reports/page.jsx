@@ -14,7 +14,7 @@ const Reports = () => {
 	const dashboardStatsCardsData = [
 		{
 			title: 'Total Clicks',
-			value: '$1,245',
+			value: '$1,345',
 			change: '+18%',
 			changePeriod: 'month',
 			icon: GoGraph,
@@ -23,7 +23,7 @@ const Reports = () => {
 		{
 			title: 'Total Connversions',
 			value: '57',
-			change: '+7%',
+			change: '+9%',
 			changePeriod: 'week',
 			icon: FaWallet,
 			iconBgClass: 'bg-green-400',

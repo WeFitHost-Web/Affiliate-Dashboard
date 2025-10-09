@@ -121,3 +121,32 @@ button {
 .custom-shadow{
    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1)
 }
+
+
+@keyframes moveIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveOut {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+
+.popup {
+    transform: translateY(100%);
+    animation: moveIn 0.5s forwards;
+}
+
+.popup-hidden {
+    animation: moveOut 0.5s forwards;
+}

@@ -1,4 +1,5 @@
 import Header from './components/header';
+import NewLinkPopup from './components/new-link-popup';
 import Overlay from './components/overlay';
 import Sidebar from './components/sidebar';
 import { UserProvider } from './context/auth-context';
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
 	return (
 		// <html lang="en">
 		// 	<body
-				
+
 		// 	>
 		// 		<UserProvider>
 		// 			{children}
@@ -37,20 +38,24 @@ export default function RootLayout({ children }) {
 		// 	</body>
 		// </html>
 
-<html lang="en">
-		<body  className={`${PoppinsReg.variable}  ${PoppinsBold.variable}  ${QuicksandReg.variable} antialiased  h-screen overflow-hidden  flex items-start  bg-white`} id="body">
+		<html lang="en">
+			<body
+				className={`${PoppinsReg.variable}  ${PoppinsBold.variable}  ${QuicksandReg.variable} antialiased  h-screen overflow-hidden  flex items-start  bg-white`}
+				id="body"
+			>
 				<UserProvider>
 					<UtilsProvider>
-			<Sidebar hidden />
-			<Overlay />
-			<section className="h-full overflow-auto  w-full  flex flex-col gap-4 bg-light">
-				<Header />
-
-				{children}
+						<Sidebar hidden />
+						<Overlay />
+						<section className="h-full overflow-auto  w-full  flex flex-col gap-4 bg-light">
+							<Header />
+							<NewLinkPopup />
+							{children}
 						</section>
-						</UtilsProvider>
-					</UserProvider>
-		</body>
-				</html>
+					</UtilsProvider>
+				</UserProvider>
+			</body>
+		</html>
 	);
 }
+

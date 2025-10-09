@@ -4,8 +4,8 @@
       "@/*": ["./*"]
     },
      
-  //  "checkJs": true,
-  //     "jsx": "preserve",
+   "checkJs": true,
+      "jsx": "preserve",
 
   }
 }

@@ -1,15 +1,14 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import logo from '~/public/images/logo.svg';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MdApps,  } from 'react-icons/md';
-import {  FaLink, FaWallet,  } from 'react-icons/fa';
+import { MdApps } from 'react-icons/md';
+import { FaLink, FaWallet } from 'react-icons/fa';
 import { VscGraph } from 'react-icons/vsc';
 import { FaGear } from 'react-icons/fa6';
 import { AiFillQuestionCircle } from 'react-icons/ai';
 import { IoLogOut } from 'react-icons/io5';
-
 
 const Sidebar = ({ hidden }) => {
 	const linkname = usePathname();
@@ -53,7 +52,7 @@ const Sidebar = ({ hidden }) => {
 	];
 	return (
 		<section
-			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5 max-xl:px-2 bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}  ${
+			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5  bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}  ${
 				hidden && 'max-lg:hidden'
 			}`}
 		>
@@ -78,9 +77,7 @@ const Sidebar = ({ hidden }) => {
 				>
 					<MdApps
 						className={`text-lg ${
-							linkname === '/'
-								? ' text-white'
-								: ' text-[#ffffffcc]'
+							linkname === '/' ? ' text-white' : ' text-[#ffffffcc]'
 						}`}
 					/>
 
@@ -123,27 +120,4 @@ const Sidebar = ({ hidden }) => {
 };
 
 export default Sidebar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

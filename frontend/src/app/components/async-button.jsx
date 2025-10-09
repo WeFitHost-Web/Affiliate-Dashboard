@@ -10,7 +10,9 @@ const AsyncButton = ({
 	disabled,
 	classname_override,
 	onClick,
-	buttonType ,
+	buttonType,
+	actionIcon: Icon,
+	icon_class = 'text-sm',
 }) => {
 	return (
 		<button
@@ -26,7 +28,11 @@ const AsyncButton = ({
 			) : loading ? (
 				<Image src={loader} className="w-7" alt="" />
 			) : (
-				action
+				<span className="flex items-center gap-1">
+					{Icon && <Icon className={icon_class} />}
+
+					{action}
+				</span>
 			)}
 		</button>
 	);

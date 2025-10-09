@@ -1,9 +1,5 @@
 import { usePopup } from '../../../utils/toggle-popups';
-import { FaCopy } from 'react-icons/fa6';
-import {
-	FaEdit,
-	FaEllipsisH,
-} from 'react-icons/fa';
+
 const ConversionRow = ({ con, index }) => {
 	const {
 		isVisible: promptVisible,
@@ -20,7 +16,9 @@ const ConversionRow = ({ con, index }) => {
 			<div className="w-[20%] text-black  font-medium text-base">
 				{con.date}
 			</div>
-			<div className="w-[35%] text-black  font-medium text-base">{con.customer}</div>
+			<div className="w-[35%] text-black  font-medium text-base">
+				{con.customer}
+			</div>
 			<div className="w-[22%] text-black  font-medium text-base">
 				{con.product}
 			</div>
@@ -43,6 +41,4 @@ const ConversionRow = ({ con, index }) => {
 };
 
 export default ConversionRow;
-
-
 

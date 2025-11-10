@@ -4,7 +4,7 @@ import HelpCenterSearch from "../components/help-search";
 import AffiliateGettingStarted from "../components/new-starter";
 import AffiliateHelpCategories from "../components/help-category";
 import ContactOptions from "../components/help-contact";
-
+import TawkMessenger from "../components/tawk";
 //import { FaLink, FaPlayCircle,FaMoneyBillWave,FaRegNewspaper } from "react-icons/fa";
 
 /*
@@ -64,7 +64,7 @@ const HelpCenter = () => {
 		  <ContactSupportForm />
 		  </div> */}
 
-
+      <TawkMessenger />
 	</main>
   );
 };

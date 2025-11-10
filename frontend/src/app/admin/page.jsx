@@ -1,6 +1,6 @@
 const AdminPage = () => {
 	return (
-		<div className="flex flex-col gap-4 items-center justify-center h-full w-full">
+		<div className="flex flex-col gap-4 items-center justify-center h-full w-full ">
 			<h1 className="text-2xl font-bold">Admin Dashboard</h1>
 		</div>
 	);

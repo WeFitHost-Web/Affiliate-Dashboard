@@ -137,7 +137,7 @@ const Sidebar = ({ hidden }) => {
 	];
 	return (
 		<section
-			className={`h-full w-[280px]     flex flex-col gap-5  items-start shrink-0   max-xl:pt-5  bg-[linear-gradient(#4361ee,#3a0ca3)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0   overflow-auto thin-scroll  mb-8 max-lg:pt-0 max-lg:gap-2    ${
+			className={`h-full w-[280px]     flex flex-col gap-5  items-start shrink-0   max-xl:pt-5  bg-[linear-gradient(#4361ee,#3a0ca3)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0   overflow-auto thin-scroll   max-lg:pt-0 max-lg:gap-2    ${
 				hidden && 'max-lg:hidden'
 			}`}
 		>

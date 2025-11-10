@@ -33,7 +33,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/links-and-tools/link-row.jsx"  ],
+, "src/app/links-and-tools/link-row.jsx", "src/app/admin/layout.jsx"  ],
   "exclude": [
     "node_modules"
   ]

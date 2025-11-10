@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '~/public/images/logo.svg';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MdApps } from 'react-icons/md';
+import { MdAdminPanelSettings, MdApps } from 'react-icons/md';
 import { FaLink, FaWallet } from 'react-icons/fa';
 import { VscGraph } from 'react-icons/vsc';
 import { FaGear } from 'react-icons/fa6';
@@ -45,14 +45,21 @@ const Sidebar = ({ hidden }) => {
 		},
 		{
 			id: 6,
+			dir: 'Admin',
+			href: '/admin',
+			icon: <MdAdminPanelSettings />,
+		},
+		{
+			id: 7,
 			dir: 'Logout',
 			href: '/#',
 			icon: <IoLogOut />,
 		},
+	
 	];
 	return (
 		<section
-			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5  bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error')) && 'hidden'}  ${
+			className={`h-full w-[250px]  pt-4  pb-5 flex flex-col gap-5  items-start shrink-0   max-xl:pt-5  bg-[linear-gradient(#4361ee,#3a56d4)]  max-lg:bg-transparent max-lg:w-full max-lg:px-0 ${(linkname.startsWith('/auth') || linkname.startsWith('/error') || linkname.startsWith('/admin')) && 'hidden'}  ${
 				hidden && 'max-lg:hidden'
 			}`}
 		>
@@ -84,7 +91,7 @@ const Sidebar = ({ hidden }) => {
 					{linkname === '/' && (
 						<div className="absolute left-0 bg-white h-full p-0.5"></div>
 					)}
-					<span className=" poppins font-semibold ">Dashboard</span>
+					<span className=" poppins  ">Dashboard</span>
 				</Link>
 				{menuList?.map((data) => (
 					<div className="relative flex  items-center" key={data.id}>
@@ -105,7 +112,7 @@ const Sidebar = ({ hidden }) => {
 							>
 								{data.icon}
 							</span>
-							<span className="line-clamp-1   text-base   poppins font-semibold">
+							<span className="line-clamp-1   text-base   poppins ">
 								{data.dir}
 							</span>
 						</Link>

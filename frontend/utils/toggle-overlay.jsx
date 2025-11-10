@@ -1,7 +1,7 @@
 'use client';
-export const toggleOverlay = () => {
-	const overlayElement = document.getElementById('overlay');
-	const bodyElement = document.getElementById('body');
+export const toggleOverlay = (overlayId, bodyId) => {
+	const overlayElement = document.getElementById(overlayId);
+	const bodyElement = document.getElementById(bodyId);
 	if (!overlayElement || !bodyElement) return;
 
 	if (overlayElement.style.transform === 'translateX(0%)') {

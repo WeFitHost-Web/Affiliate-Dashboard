@@ -8,13 +8,13 @@ export default function RootLayout({ children }) {
     <main >
        <AdminUtilsProvider>
       <div
-        className={` antialiased  h-screen overflow-hidden  flex items-start  bg-white`}
+        className={` antialiased  h-screen overflow-hidden  flex items-start  bg-white `}
         id="admin-body"
       >
        
         <Sidebar hidden />
        <Overlay/>
-        <section className="h-full overflow-auto  w-full  flex flex-col gap-4 bg-light">
+        <section className="h-full overflow-auto  w-full  flex flex-col gap-4 bg-light p-5  max-lg:p-0 ">
           <Header/>
           {children}
         </section>
